@@ -1,0 +1,50 @@
+# Root-level ignores for combined repo
+
+# macOS / IDE
+.DS_Store
+*.swp
+*.swo
+.idea/
+.vscode/
+.phpunit.result.cache
+
+# Node (if you later add frontends)
+node_modules/
+pnpm-lock.yaml
+yarn.lock
+
+# Composer vendors (both projects)
+bugtracker-laravel/vendor/
+bugtracker-codeigniter/vendor/
+
+# Env files (keep examples)
+bugtracker-laravel/.env
+bugtracker-laravel/.env.*
+!.env.example
+bugtracker-codeigniter/.env
+bugtracker-codeigniter/.env.*
+!bugtracker-codeigniter/.env.example
+
+# Laravel runtime/cache
+bugtracker-laravel/storage/*.key
+bugtracker-laravel/storage/app/*
+bugtracker-laravel/storage/framework/cache/*
+bugtracker-laravel/storage/framework/sessions/*
+bugtracker-laravel/storage/framework/views/*
+bugtracker-laravel/storage/logs/*
+
+# CI4 runtime/cache
+bugtracker-codeigniter/writable/cache/*
+bugtracker-codeigniter/writable/logs/*
+bugtracker-codeigniter/writable/session/*
+
+# Public storage symlinks (Laravel)
+bugtracker-laravel/public/storage
+
+# Coverage / build artifacts
+coverage/
+build/
+dist/
+
+# OS junk
+Thumbs.db
